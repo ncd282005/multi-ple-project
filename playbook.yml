@@ -1,0 +1,23 @@
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Install docker-compose
+      apt:
+        name: docker-compose
+        state: present
+
+    - name: Pull repo
+      git:
+        repo: https://github.com/your-repo.git
+        dest: /app
+
+    - name: Run containers
+      shell: docker-compose up -d
+      args:
+        chdir: /app/docker
