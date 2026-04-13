@@ -1,3 +1,3 @@
-https://roadmap.sh/projects/dummy-systemd-service
+https://roadmap.sh/projects/pomodoro-timer
 
 # multi-ple-project
